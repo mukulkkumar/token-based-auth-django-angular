@@ -1,0 +1,36 @@
+<div style="text-align:center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h1>Book List
+          <div class="float-right">
+            <a [routerLink]="['/door-create']" class="btn btn-default btn-lg">
+              Add New Door
+            </a>
+          </div>
+        </h1>
+        <br>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let door of doors">
+              <td>{{ door.id }}</td>
+              <td>{{ door.title }}</td>
+              <td>{{ door.status }}</td>
+              <td><a [routerLink]="['/door-details', door.id]" class="btn btn-success">Show Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+</div>

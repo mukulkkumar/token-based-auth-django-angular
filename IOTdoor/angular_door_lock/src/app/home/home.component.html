@@ -1,0 +1,28 @@
+<div style="text-align:center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br><br>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id -</th>
+              <th>Title</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let door of doors">
+              <td>{{ door.id }}</td>
+              <td>{{ door.title }}</td>
+              <td>{{ door.status }}</td>
+              <td><a routerLink='/door' class="btn btn-success">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+</div>
