@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-doors',
@@ -10,7 +11,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DoorsComponent implements OnInit {
   doors: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _auth: AuthService) { }
 
   ngOnInit() {
     this.http.get('http://localhost:8000/doorlock/api/door').subscribe(data => {
